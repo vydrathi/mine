@@ -1,7 +1,7 @@
 #I specify the parent base image which is the python version 3.7
 FROM python:3.7
 
-MAINTAINER aminu israel <aminuisrael2@gmail.com>
+MAINTAINER devops-seda <sedaatalay96@gmail.com>
 
 # This prevents Python from writing out pyc files
 ENV PYTHONDONTWRITEBYTECODE 1
