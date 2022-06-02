@@ -1,7 +1,6 @@
 pipeline {
     environment {
         registry = 'jenk_deneme/ml_model'
-        registryCredential = 'dockerhub_id'
         dockerImage = ''
     }
     agent any
