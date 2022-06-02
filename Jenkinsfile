@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = 'israelaminu/ml_model'
+        registry = 'jenk_deneme/ml_model'
         registryCredential = 'dockerhub_id'
         dockerImage = ''
     }
