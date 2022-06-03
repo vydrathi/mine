@@ -6,11 +6,11 @@ import pandas as pd
 from flask import Flask, request
 import warnings
 warnings.filterwarnings('ignore')
-from CustomCode import data_preprocessing
+
 
 flask_app = Flask(__name__)
 
-model_path = 'ML_model/finalized_model.sav'
+model_path = 'finalized_model.sav'
 
 @flask_app.route('/', methods=['GET'])
 def index_page():
@@ -23,17 +23,17 @@ def index_page():
 @flask_app.route('/predict',methods=['GET'])
 def get_pred():
     try:
-      dict_of_data = json.loads(request.data)
-      X = dict_of_data['X']
-      loaded_model = pickle.load(open(model_path, 'rb'))
-      pred = neigh.predict([X])
+        dict_of_data = json.loads(request.data)
+        X = dict_of_data['X']
+        loaded_model = pickle.load(open(model_path, 'rb'))
+        pred = loaded_model.predict([X])
 
-      status_code = 200
-      return_data={
+        status_code = 200
+        return_data={
           "error": "0",
           "message": "Successfull",
           "predict": pred,
-      }
+        }
 
     
     except Exception as e:
@@ -47,4 +47,4 @@ def get_pred():
 
 
 if __name__ == "__main__":
-    flask_app.run(port=9090, debug=True)
+    flask_app.run(port=7070, debug=True)
