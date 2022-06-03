@@ -10,7 +10,7 @@ from CustomCode import data_preprocessing
 
 flask_app = Flask(__name__)
 
-model_path = 'ML_model/finalized_model.sav''
+model_path = 'ML_model/finalized_model.sav'
 
 @flask_app.route('/', methods=['GET'])
 def index_page():
