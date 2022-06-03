@@ -47,4 +47,4 @@ def get_pred():
 
 
 if __name__ == "__main__":
-    flask_app.run(port=7070, debug=True)
+    flask_app.run(port=9090, debug=True)
