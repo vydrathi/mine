@@ -18,6 +18,7 @@ RUN pip install --no-cache-dir --upgrade pip
 
 # set work directory
 WORKDIR /src/app
+# This is to check if commit will trigger jenkins
 
 # copy requirements.txt
 COPY ./requirements.txt /src/app/requirements.txt
